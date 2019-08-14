@@ -323,7 +323,7 @@ function Invoke-NsxtRestMethod {
     Param (
 
     [parameter(Mandatory=$true)]
-    [ValidateSet("GET","POST","PUT","DELETE")]
+    [ValidateSet("GET","POST","PUT","DELETE","PATCH")]
     [String]$Method,
 
     [parameter(Mandatory=$true)]
