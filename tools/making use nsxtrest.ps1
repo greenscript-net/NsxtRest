@@ -44,7 +44,7 @@ $Results = Invoke-NsxtRestMethod -Method "Get" -URI  $BaseUri
 foreach ($group in $Results.results){
     $Body = $group | Select-Object description,display_name,"_revision"
     $Body.display_name = "Mary Poppins"
-    Invoke-NsxtRestMethod -Method "Patch" -URI  "$BaseUri/$newGroupName" -Body ($Body | ConvertTo-Json -Depth 99 -Compress) 
+    Invoke-NsxtRestMethod -Method "Patch" -URI  "$BaseUri/$($group.id)" -Body ($Body | ConvertTo-Json -Depth 99 -Compress) 
 }
 
 $Results = Invoke-NsxtRestMethod -Method "Get" -URI  $BaseUri
@@ -58,7 +58,7 @@ $Results.results | Format-Table
 foreach ($group in $Results.results){
     $Body = $group | Select-Object description,display_name,"_revision"
     $Body.display_name = $group.id
-    Invoke-NsxtRestMethod -Method "Patch" -URI  "$BaseUri/$newGroupName" -Body ($Body | ConvertTo-Json -Depth 99 -Compress) 
+    Invoke-NsxtRestMethod -Method "Patch" -URI  "$BaseUri/$($group.id)" -Body ($Body | ConvertTo-Json -Depth 99 -Compress) 
 }
 
 $Results = Invoke-NsxtRestMethod -Method "Get" -URI  $BaseUri

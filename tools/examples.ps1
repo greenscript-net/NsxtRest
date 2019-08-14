@@ -3,11 +3,11 @@
 $BaseUri = "https://nsxt.greenscript.net/policy/api/v1/infra/domains/default/groups"
 
 
-## Call 1 Get
+## Call 1 patch
 
 $Method = "Patch"
 
-$newGroupName = "testGrp980"
+$newGroupName = "testGrp960"
 
 $Body = @{
     "description" = $newGroupName
