@@ -111,7 +111,7 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = 'https://github.com/greenscript-net/NsxtRest/blob/master/RELEASE.md'
 
     } # End of PSData hashtable
 
