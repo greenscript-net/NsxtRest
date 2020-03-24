@@ -15,13 +15,3 @@ Connect-NsxtRestServer -Server $servername -cred $credential
 Invoke-NsxtRestMethod -Method GET -URI /api/v1/licences
 
 Disconnect-NsxtRestServer
-
-## test of mermaid integration
-
-```mermaid
-graph LR
-A[Hard edge] -->B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-```
